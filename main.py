@@ -122,6 +122,8 @@ def levelup(character):
         character["MP"] = character["MMP"]
         character["HP"] = character["MHP"]
         character['MXP'] += 50
+        if character["EXP"] >= character['MXP']:     #this is for checking that even after leveling there is enough exp to level up again
+            levelup(character)
 
 
 ################################################################################################################################################
