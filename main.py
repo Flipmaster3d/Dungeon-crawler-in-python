@@ -122,6 +122,8 @@ def levelup(character):
         character["MP"] = character["MMP"]
         character["HP"] = character["MHP"]
         character['MXP'] += 50
+        if character["EXP"] >= character['MXP']:      #just add this, trust
+            levelup(character)
 
 
 ################################################################################################################################################
